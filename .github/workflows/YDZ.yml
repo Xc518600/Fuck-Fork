@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Maomaoyu0319/Ziye.git ~/Ziye
+          git clone https://github.com/Ziye11/JavaScript.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -29,12 +29,12 @@ jobs:
       - name: npm install
         if: env.YDZ_yuedongzuTOKEN
         run: |
-          cd ~/Ziye
+          cd ~/JavaScript
           npm install
       - name: '运行 【悦动族】'
         if: env.YDZ_yuedongzuTOKEN
         run: |
-          cd ~/Ziye
+          cd ~/JavaScript
           node Task/yuedongzu.js
         env:
           
