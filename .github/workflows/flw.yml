@@ -23,7 +23,8 @@ jobs:
         FL_DHCASH: ${{ secrets.FL_DHCASH }}//签到活动兑换
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run: |
+          git clone -b main https://github.com/Maomaoyu0319/Ziye.git ~/Ziye
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -31,11 +32,12 @@ jobs:
       - name: npm install
         if: env.FL_flwURL
         run: |
+          cd ~/Ziye
           npm install
       - name: '运行 【返利网】'
         if: env.FL_flwURL
         run: |
-         
+          cd ~/Ziye
           node flw.js
         env:
           
