@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Ziye11/JavaScript.git ~/JavaScript
+          git clone -b main https://github.com/Maomaoyu0319/Ziye.git ~/Ziye
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -29,15 +29,14 @@ jobs:
       - name: npm install
         if: env.YDZ_yuedongzuTOKEN
         run: |
-          cd ~/JavaScript
+          cd ~/Ziye
           npm install
       - name: '运行 【悦动族】'
         if: env.YDZ_yuedongzuTOKEN
         run: |
-          cd ~/JavaScript
+          cd ~/Ziye
           node Task/yuedongzu.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
