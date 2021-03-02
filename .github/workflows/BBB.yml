@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        
         BBB_bububaoTOKEN: ${{ secrets.BBB_bububaoTOKEN }}
         BBB_CASH: ${{ secrets.BBB_CASH }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run: |
+          git clone -b main https://github.com/Maomaoyu0319/Ziye.git ~/Ziye
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -27,13 +27,14 @@ jobs:
       - name: npm install
         if: env.BBB_bububaoTOKEN
         run: |
+          cd ~/Ziye
           npm install
       - name: '运行 【步步宝】'
         if: env.BBB_bububaoTOKEN
         run: |
-          node bububao.js
+          cd ~/Ziye
+          node Task/bububao.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
