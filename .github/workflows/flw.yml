@@ -38,9 +38,8 @@ jobs:
         if: env.FL_flwURL
         run: |
           cd ~/Ziye
-          node flw.js
+          node Task/flw.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
