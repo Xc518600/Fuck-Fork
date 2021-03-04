@@ -28,7 +28,7 @@ jobs:
       - name: '运行 【xsmm】'
         if: env.XSMM_HD
         run: |
-          node task/xsmm.js
+          node xsmm.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
