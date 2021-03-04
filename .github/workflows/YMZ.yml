@@ -16,7 +16,7 @@ jobs:
     env:
 
         YMZ_ymzhuanggBODY: ${{ secrets.YMZ_ymzhuanggBODY }}
-        YMZ_YMZHUANSPBODY: ${{ secrets.YMZ_ymzhuanspBODY }}
+        YMZ_ymzhuanspBODY: ${{ secrets.YMZ_ymzhuanspBODY }}
         YMZ_ymzhuantxBODY: ${{ secrets.YMZ_ymzhuantxBODY }}
     steps:
       - name: Checkout
@@ -36,8 +36,7 @@ jobs:
         run: |
           cd ~/Ziye
           node Task/ymzhuan.js
-        env:
-          
+        env:   
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
