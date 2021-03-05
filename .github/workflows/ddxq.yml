@@ -4,7 +4,7 @@ name: 嘀嗒星球
 on:
   workflow_dispatch:
   schedule:
-     - cron: '2 0-12/2 * * *'
+     - cron: '2 0-12/3 * * *'
   watch:
     types: started
 jobs:
