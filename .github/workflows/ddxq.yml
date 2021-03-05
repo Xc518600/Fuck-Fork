@@ -1,10 +1,10 @@
-name: ddxq
+name: 嘀嗒星球
 
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '13 1-13 * * *'
+     - cron: '2 0-12/2 * * *'
   watch:
     types: started
 jobs:
@@ -27,10 +27,10 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【ddxq】'
+      - name: '运行 【嘀嗒星球】'
         if: env.DDXQ_HD
         run: |
-          node task/ddxq.js
+          node ddxq.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
