@@ -6,7 +6,7 @@ name: 小乐
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 1 * * *'
+     - cron: '8 1-15 * * *'
   watch:
     types: started
 jobs:
@@ -17,7 +17,6 @@ jobs:
 
         XL_URL: ${{ secrets.  XL_URL }}
         XL_HEADER: ${{ secrets.  XL_HEADER }}
-        
     steps:
       - name: Checkout
         run: |
