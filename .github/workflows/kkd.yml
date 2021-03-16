@@ -21,8 +21,7 @@ jobs:
 
     steps:
       - name: Checkout
-        run: |
-          git clone https://github.com/ZhiYi-N/Private-Script.git ~/Private-Script
+        uses: actions/checkout@v1
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -30,15 +29,12 @@ jobs:
       - name: npm install
         if: env.KKDHEADER
         run: |
-          cd ~/Private-Script
           npm install
       - name: '运行 【快看点】'
         if: env.KKDHEADER
         run: |
-          cd ~/Private-Script
-          node Scripts/kkd.js
-        env:
-          
+          node kkd.js
+        env:  
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
