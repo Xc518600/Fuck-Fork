@@ -1,10 +1,10 @@
-name: ysm
+name: 云扫码
 
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '3 1-13 * * *'
+     - cron: '3 1-11/2 * * *'
   watch:
     types: started
 jobs:
@@ -20,8 +20,7 @@ jobs:
         TZ: Asia/shanghai
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-        
+        uses: actions/checkout@v1     
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -29,10 +28,10 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【ysm】'
+      - name: '运行 【云扫码】'
         if: env.YSM_HD
         run: |
-          node task/ysm.js
+          node ysm.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
