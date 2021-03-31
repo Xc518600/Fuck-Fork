@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        XM_URL: ${{ secrets.FQKK_URL }}
-        XM_HD: ${{ secrets.FQKK_HD }}       
+        XM_URL: ${{ secrets. XM_URL }}
+        XM_HD: ${{ secrets. XM_HD }}       
         TZ: Asia/shanghai
     steps:
       - name: Checkout
