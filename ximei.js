@@ -89,17 +89,7 @@ if ($.isNode()) {
   } else {
    ximeihd = process.env.XM_HD.split()
   };
-   Object.keys(ximeiurl).forEach((item) => {
-        if (ximeiurl[item]) {
-          ximeiurlArr.push(ximeiurl[item])
-        }
-    });
-    Object.keys(ximeihd).forEach((item) => {
-        if (ximeihd[item]) {
-          ximeihdArr.push(ximeihd[item])
-        }
-    });
-
+   
 !(async () => {
   if (typeof $request !== "undefined") {
     await ximeick()
