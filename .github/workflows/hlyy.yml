@@ -6,7 +6,6 @@ on:
      - cron: '*/30 0-15 * * *'
   watch:
     types: started
-
 jobs:
   build:
     runs-on: ubuntu-latest
