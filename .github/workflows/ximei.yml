@@ -1,12 +1,12 @@
-name: 西梅
+
+name: 番茄看看
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '6 1,2 * * *'
+     - cron: '10 0,1 * * *'
   watch:
     types: started
-
 jobs:
   build:
     runs-on: ubuntu-latest
