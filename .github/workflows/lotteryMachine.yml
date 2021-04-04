@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东抽奖机
+name: 京东有机牧场
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */2 1-31 4-7 *'
   watch:
     types: started
   repository_dispatch:
-    types: lotteryMachine
+    types: monk_pasture
 jobs:
   build:
 
@@ -35,7 +35,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东抽奖机】'
+      - name: '运行 【京东有机牧场】'
         run: |
           node monk_pasture.js
         env:
