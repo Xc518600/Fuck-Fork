@@ -10,11 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        WKZZ_ID: ${{ secrets.WKZZ_ID }}
-        WKZZ_URL: ${{ secrets.WKZZ_URL }}
-        WKZZ_HD: ${{ secrets.WKZZ_HD }}    
+    if: github.event.repository.owner.id == github.event.sender.id    
     steps:
       - name: Checkout
         uses: actions/checkout@v1
