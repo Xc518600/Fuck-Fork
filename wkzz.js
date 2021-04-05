@@ -60,7 +60,13 @@ hostname = wx.tiantianaiyuedu.site
 
 
 const $ = new Env('微客众智自动阅读');
-const wkzz = $.getjson('wkzz', [  {    "id": 638726,    "url": "http://wx.tiantianaiyuedu.site/read/article",    "hd": "{\"X-Requested-With\":\"XMLHttpRequest\",\"Connection\":\"keep-alive\",\"Accept-Encoding\":\"gzip, deflate\",\"Content-Type\":\"application/json;charset=utf-8\",\"Origin\":\"http://wx.tiantianaiyuedu.site\",\"User-Agent\":\"Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000329) NetType/WIFI Language/zh_CN\",\"X-CSRF-TOKEN\":\"dSz7xsUU6IY93kvx7N5HQ9NCIJK7bY0422KowXyj\",\"Cookie\":\"XSRF-TOKEN=eyJpdiI6IlgzZW1ZNXZXRSs1YmNtMTdrcEFERWc9PSIsInZhbHVlIjoiTXV3Tmh3QmY0MjM5VUlxZWpQWnpmb1NNUjd2OUpiOEZWWmtMV0N1Sm41YUEyNFlcL004UVBWTzRcL1ZPRFh6TmNkN205c2pxckpHeUU5M3hJTjJ5cFl2dz09IiwibWFjIjoiZjQ2OWNjNDkwMDJiYjc5MjAzNzZiMDA2ZGFmMWFhYmQxMjFmOGVjYzU2NWU4MGZjYmY4YWE2NGU3OTE5MjMzZSJ9; laravel_session=eyJpdiI6ImpaU3NNZGxtd3FLa1dud01GbUtEY3c9PSIsInZhbHVlIjoiTGlXUFB3ZlNDVGRSbUt2YlhNeGV2Rkt0SWoxMW55S2t2YkhMbDhqYm1yV2VaOEUzVG40blVDVE04T04xR3ZTTiswMXBZMzV5T2puMDduTHlod1FyVVE9PSIsIm1hYyI6IjJiZGVkYjdjNWZlNDlmYTQxNGE4OGM2YmNiYzBiMTE1ZTE5ZjFmOWM2ZDMzMDQ2YmNhN2Y2MWI3NTU1MTJjNDMifQ%3D%3D\",\"Host\":\"wx.tiantianaiyuedu.site\",\"Accept-Language\":\"zh-cn\",\"Accept\":\"application/json, text/plain, */*\",\"Content-Length\":\"107\"}"  }])
+const wkzz = $.getjson('wkzz', [
+  {
+    "id": 638726,
+    "url": "http://wx.tiantianaiyuedu.site/read/article",
+    "hd": "{\"X-Requested-With\":\"XMLHttpRequest\",\"Connection\":\"keep-alive\",\"Accept-Encoding\":\"gzip, deflate\",\"Content-Type\":\"application/json;charset=utf-8\",\"Origin\":\"http://wx.tiantianaiyuedu.site\",\"User-Agent\":\"Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000329) NetType/WIFI Language/zh_CN\",\"X-CSRF-TOKEN\":\"pQMC0oOKJIhXaundgcALrH9eugdgvgpW5045SeQI\",\"Cookie\":\"XSRF-TOKEN=eyJpdiI6ImYzODRTMm55UVwvNTJPMEt1ZzA1NitnPT0iLCJ2YWx1ZSI6IjBaUmszblVHQllPVklkUE44RllRejBkTjZOYnN5RFFSTk5TSE52TXNNYTR3Y0pwM2kzSnp6NzlFKzRLQ2RGb3k3VGRZWEpYdlhkbzZwcDZTZ0EybW5RPT0iLCJtYWMiOiIyNDBkZDg5ZmQyYTU1MzRhOGU1NzgxZDAxYzVkZWY3MDViMmIxYzVjNTI0OTcwZGUwMTg1OTM3ODEwZjBjMmNkIn0%3D; laravel_session=eyJpdiI6IjE4bFRcL1E3WEtpcG1xNlBDd1JHaXp3PT0iLCJ2YWx1ZSI6IjZtbVNHclFBME5cL250dGhXZGJDWmxNXC9wR0NPTEFYVFAwNXArbHg1b0ZMd0JmMFdyN3VcL0JLZkpXdjlUNXFCYm95ZDRsZWhEeTdXS0NZZ0V5eHRROHFnPT0iLCJtYWMiOiIyYjYxZTBmNTE4OGU2MDk2NmNiYWE0OTgzOTRkNzdmZTgxMmQ2Yjg3ZmMzMjU5ZTFlMDE5YWU0MzAwMDEyYmE5In0%3D\",\"Host\":\"wx.tiantianaiyuedu.site\",\"Accept-Language\":\"zh-cn\",\"Accept\":\"application/json, text/plain, */*\",\"Content-Length\":\"107\"}"
+  }
+])
 let times = Math.round(Date.now() / 1000)
 let wkzzurl = '', wkzzhd = '',id = '',uid='',tid='',name=''
 !(async () => {
