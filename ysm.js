@@ -66,11 +66,11 @@ https://raw.githubusercontent.com/age174/-/main/feizao.box.json
 */
 
 const $ = new Env('云扫码')
-let ysm = $.getjson('ysm', [  {    "openid": "oksnzwe3KqS71LiPHnLdmUwqguUs",    "domain": "http://aaa.saomayun.cn/yunonline/v1/",    "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000326) NetType/WIFI Language/zh_CN",    "secret": "eyJpdiI6IkNlVTRVOUtZbTk5SzhrZlFcLzBiNTRnPT0iLCJ2YWx1ZSI6IlJ4WmtNcm1XanpzN0pTQ3ZXTVZHWXhmSEQxWkk0Z3JJU3NyOWxCY284NHlhbU9ydkUrYldqXC93VlA4UG41MjJDRnhMWUpocU10dHBJVmhTSmVuNTV0MjhidlRPWXRvcHVnRjVLenhFeUpnTHhNY3BxYkZUYndVckpUSFJ6V3VFcUlYTzZqWmlHaEVRZ1I5XC9mTTB5M3YwOHVpc1VNM0gwU2Z1MFMzSGNzNlQ4RVZHT2UxVzhIam9TQ1wvWUFiQUJ3QVJ1MFpFb2hzcUVQUmZjMnN3NmdFWjZcL1BcL1dnV1k3SDJNNlk3Q0ppYVQwdzJhVTFBeXVFZWU2bURiZTVZR2FQa1hhTXRucENSNlI0RU5RSFBkRXpGOUF0KytoTmR4MFdOOU83b1Nna0tIVDF1SVNHd3crNWhQTVdYS1pNeGpiYmNlOUpwQjZDYmhSa2wxdXd6eEMyXC9LUnBQcTMrUWorTWs2MXBDVW1wSWtsMGw3dG9pSzU2KzlhNmh2TzRMNjlWQ0ZFdGdWOVwvSitiN3htNnVNN1JuTVwvdz09IiwibWFjIjoiMTZjNjFmOTU3MmJjNmZlZTJjNmQ3ODYwODYwODc3MmQ4ZGJkMWRhMzI1NzhiOTIxNTA1N2ZlMGQyZWU2OTgxNCJ9",    "txbody": "openid=oksnzwe3KqS71LiPHnLdmUwqguUs&request_id=4363635a025c72fda116345f43de72eb&ua=1"  }])
+let ysm = require('./ysm.json');
 let needNotice = $.getval('ysmNotice') == 'true'
 let ysmBanfirstTask = $.getval('ysmBanfirstTask') == 'true' // 禁止脚本执行首个任务，避免每日脚本跑首次任务导致微信限制
 let ysmBanhalfTask = $.getval('ysmBanhalfTask') == 'true' // 脚本执行完第50个任务时退出任务，再手动阅读2篇避免出现微信限制
-let ysmtxAmt = ($.getval('ysmtxAmt') || '10000') - 0  // 此处修改提现金额，0.3元等于3000币，默认不提现
+let ysmtxAmt = ($.getval('ysmtxAmt') || '0') - 0  // 此处修改提现金额，0.3元等于3000币，默认不提现
 ysmtxAmt = ysmtxAmt > 3000 ? (parseInt(ysmtxAmt / 1000) * 1000) : ysmtxAmt > 0 ? 3000 : 0
 let concurrency = ($.getval('ysmConcurrency') || '1') - 0 // 并发执行任务的账号数，默单账号循环执行
 concurrency = concurrency < 1 ? 1 : concurrency
