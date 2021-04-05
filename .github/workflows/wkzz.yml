@@ -15,7 +15,6 @@ jobs:
         WKZZ_ID: ${{ secrets.WKZZ_ID }}
         WKZZ_URL: ${{ secrets.WKZZ_URL }}
         WKZZ_HD: ${{ secrets.WKZZ_HD }}    
-        TZ: Asia/shanghai
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -28,7 +27,6 @@ jobs:
         run: |
           npm install
       - name: '运行 【微客】'
-        if: env.WKZZ_URL
         run: |
           node wkzz.js
         env:
