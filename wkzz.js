@@ -60,7 +60,7 @@ hostname = wx.tiantianaiyuedu.site
 
 
 const $ = new Env('微客众智自动阅读');
-const wkzz = require('./wkzz.json');
+const wkzz = require('./wkzm.json');
 let times = Math.round(Date.now() / 1000)
 let wkzzurl = '', wkzzhd = '',id = '',uid='',tid='',name=''
 !(async () => {
