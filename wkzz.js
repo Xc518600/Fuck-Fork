@@ -109,8 +109,8 @@ if (iswkzzck = typeof $request !== 'undefined') {
   if (!wkzzhd[0]) {
     $.msg($.name, '【提示】请先获取微众众智一header')
     return;
-  } else {//wkzzurlArr.push($.getdata('wkzzurl'))
-    //wkzzhdArr.push($.getdata('wkzzhd'))
+  } else {wkzzurlArr.push($.getdata('wkzzurl'))
+    wkzzhdArr.push($.getdata('wkzzhd'))
     let wkzzcount = ($.getval('wkzzcount') || '1');
   for (let i = 2; i <= wkzzcount; i++) {
     wkzzurlArr.push($.getdata(`wkzzurl${i}`))
