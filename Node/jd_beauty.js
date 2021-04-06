@@ -92,7 +92,7 @@ async function mr() {
   const WebSocket = require('ws')
   let client = new WebSocket(`wss://xinruimz-isv.isvjcloud.com/wss/?token=${$.token}`,null,{
     headers:{
-      'user-agent': process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;iPhone;9.4.7;14.4.2;e153c3be41e43d3a14cae0375640029a3a943311;network/wifi;supportApplePay/0;hasUPPay/0;hasOCPay/0;model/iPhone11,8;addressid/2954954274;supportBestPay/0;appBuild/167622;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+      'user-agent': process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;android;9.2.0;10;f8fdf86590802d66;network/wifi;model/ONEPLUS A5010;addressid/138709979;aid/f8fdf86590802d66;oaid/;osVer/29;appBuild/85134;psn/f8fdf86590802d66|126;psq/4;uid/f8fdf86590802d66;adk/;ads/;pap/JA2015_311210|9.2.0|ANDROID 10;osv/10;pv/126.4;jdv/0|kong|t_1001777500_|jingfen|91cfd288cb8c49cda6369214e39253f4|1603498231611|1603601335;ref/com.jingdong.app.mall.home.JDHomeFragment;partner/lc001;apprpd/Home_Main;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 10; ONEPLUS A5010 Build/QKQ1.191014.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045230 Mobile Safari/537.36 s",
     }
   })
   console.log(`wss://xinruimz-isv.isvjcloud.com/wss/?token=${$.token}`)
