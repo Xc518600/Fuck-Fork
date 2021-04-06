@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【美丽研究院】'
         run: |
-          node jd_beauty.js
+          node Node/jd_beauty.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PASTURE_EXCHANGE_KEYWORD: ${{ secrets.PASTURE_EXCHANGE_KEYWORD }}
