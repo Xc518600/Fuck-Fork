@@ -92,7 +92,7 @@ async function mr() {
   const WebSocket = require('ws')
   let client = new WebSocket(`wss://xinruimz-isv.isvjcloud.com/wss/?token=${$.token}`,null,{
     headers:{
-      'user-agent': process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;iPhone;9.4.6;14.3;b82f74cfa8b940f2cee7ec3546f7b7f0334c7882;network/wifi;ADID/15EF823D-119E-470D-AAFC-D8656322BA15;supportApplePay/0;hasUPPay/0;hasOCPay/0;model/iPhone12,1;addressid/580567206;supportBestPay/0;appBuild/167618;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+      'user-agent': process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : "jdapp;iPhone;9.4.7;14.4.2;e153c3be41e43d3a14cae0375640029a3a943311;network/wifi;supportApplePay/0;hasUPPay/0;hasOCPay/0;model/iPhone11,8;addressid/2954954274;supportBestPay/0;appBuild/167622;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
     }
   })
   console.log(`wss://xinruimz-isv.isvjcloud.com/wss/?token=${$.token}`)
