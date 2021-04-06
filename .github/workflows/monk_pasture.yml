@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【京东有机牧场】'
         run: |
-          node monk_pasture.js
+          node Node/monk_pasture.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PASTURE_EXCHANGE_KEYWORD: ${{ secrets.PASTURE_EXCHANGE_KEYWORD }}
